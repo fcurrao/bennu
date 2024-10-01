@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bennu Challenge Fullstack</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+    <script>
+    function onLoadHandler() { 
+        executeQ1();
+        executeQ2();
+        executeQ3();
+        executeQ4();
+        executeQ5();
+    }
+
+    </script>
+</head>
+
+<body onload="onLoadHandler()">
+    <header>
+        <h1>Bennu - frontend</h1>
+    </header>
+    <div class="header">
+        <h2 class="check">Parte 1, crear API</h2>
+    </div>
+    <div class="wrapper">
+        <div class="description">
+
+            <p>Para el armado de la API hay libertad de tecnologías y técnica, tanto código como base de datos, siempre teniendo en cuenta la guía introductoria de la prueba (hola.doc)</p>
+
+            <h4>Funcionalidades:</h4>
+            <ul>
+                <li><p>Entregar un listado de nombres con una estructura similar a https://jsonplaceholder.typicode.com/users.</p></li>
+                <li><p>Recibir nuevos sujetos y guardarlos.</p></li>
+                <li><p>Actualizar el conteo de estos sujetos.</p></li>
+            </ul>
+
+            <h4>Endpoints:</h4>
+            <ul>
+                <li><p>Root</p></li>
+                <li><p>Get Users</p></li>
+                <li><p>Get Users Count</p></li>
+                <li><p>Post User</p></li>
+            </ul>
+
+        </div>
+    </div>
+    <hr>
+    <div class="header">
+        <h2 class="check">Parte 2, Frontend</h2>
+    </div>
+    <div class="wrapper">
+        <div class="description">
+            <p>Cada desafío tiene una función que se inicia automáticamente al cargar el documento, agregar el código necesario para resolverlo. Para cada pregunta, debe actualizar solo la sección correspondiente.</p>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>1. Actualizar la función <span class="file-name">"executeQ1"</span> para que muestre tu nombre en la siguiente línea:</p>
+            </div>
+            <div class="answer">
+                <p>Hola, mi nombre es <span id="my-name"></span></p>
+            </div>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>2. Utilizando el array <span class="variable-name">"listItems"</span> definido en la sección "Question 2", actualizar la función <span class="file-name">executeQ2</span> para mostrar cada elemento en el siguiente listado:</p>
+            </div>
+            <div class="answer">
+                <ol id="q2-list"></ol>
+            </div>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>3. Utilizando la clase <span class="variable-name">"Person"</span> definida en la sección "Question 3", actualizar la función <span class="file-name">executeQ3</span>, crear dos instancias con los nombres "Scott" y "Matt", en ese orden, mostrar los nombres en el siguiente listado:</p>
+            </div>
+            <div class="answer">
+                <ul id="q3-list"></ul>
+            </div>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>4. Crear un formulario con los inputs necesarios para crear una nueva persona (ver estructura https://jsonplaceholder.typicode.com/users) y crear la funcionalidad necesaria para enviar los datos a la API.</p>
+                <p>Al enviar los datos de un usuario nuevo, debe actualizar el contenido de la siguiente línea:</p>
+                <p>Cantidad de usuarios: <span id="users-count"> ... </span></p>
+            </div>
+            <form id="user-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br>
+            
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required><br>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+            
+                <label for="street">Calle:</label>
+                <input type="text" id="street" name="street" required><br>
+            
+                <label for="prov">Provincia:</label>
+                <input type="text" id="prov" name="prov" required><br>
+            
+                <label for="city">Ciudad:</label>
+                <input type="text" id="city" name="city" required><br>
+            
+                <label for="phone" >Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+            
+                <button type="submit">Crear usuario</button>
+            </form>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>5. Obtener el contenido de <span class="file-name">{{Get Users}}</span> luego mostrar el valor de la llave "name" de cada ítem en el siguiente listado.</p>
+            </div>
+            <div class="answer">
+                <div id="q5-answer"></div>
+            </div>
+            <button class="export-users" onclick="exportUser()">Exportar Usuarios a Excel</button>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>6. Usando <span class="file-name">"main.css"</span> aplicar estilos para que los siguientes bloques estén en una cuadrícula de 3x2 con el fondo gris cubriéndolos.</p>
+                <p>Además, bloques impares (1, 3, 5) deberían ser verdes (# 00FF00).</p>
+            </div>
+            <div class="answer">
+                <div class="q6-wrapper">
+                    <div class="q6-block"></div>
+                    <div class="q6-block"></div>
+                    <div class="q6-block"></div>
+                    <div class="q6-block"></div>
+                    <div class="q6-block"></div>
+                    <div class="q6-block"></div>
+                </div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="description">
+                <p>7. Usando <span class="file-name">"main.css"</span> aplicar los siguiente estilos:</p>
+                <ul>
+                    <li><p>El "header" debe tener fondo rojo (#F00) y texto blanco (#FFF) alineado al centro.</p></li>
+                    <li><p>Todos los nombres de archivo (class "file-name") sean azules (#00F) y en negrita.</p></li>
+                    <li><p>Tu nombre debería mostrarse en mayúsculas.</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

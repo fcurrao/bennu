@@ -1,0 +1,184 @@
+body {
+    margin: 40px auto;
+    font-family: Arial;
+    max-width: 640px;
+}
+
+.question {
+    margin-bottom: 60px;
+}
+
+hr {
+    margin: 40px;
+    border: none;
+    border-top: 1px solid #bbb;
+}
+
+/********************************
+ * QUESTION 5.
+ *******************************/
+.q6-wrapper {
+    background: #EFEFEF;
+}
+
+.q6-wrapper .q6-block {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: #333;
+}
+
+.export-users {
+    background-color: #007bff; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+.export-users:hover {
+    background-color: #0056b3; 
+}
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#users-count {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+/********************************
+ * QUESTION 6.
+ *******************************/
+
+ .q6-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 10px;   
+    width: 100%;  
+    justify-items: center;
+}
+
+.q6-block {
+    background-color: gray;   
+    height: 150px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+ 
+/*  impares */
+.q6-block:nth-child(odd) {
+    background-color: #00FF00;  
+}
+
+/*  pares */
+.q6-block:nth-child(even) {
+    background-color: gray;  
+}
+
+
+
+/********************************
+ * QUESTION 7.
+ *******************************/
+
+ header {
+    background-color: #F00; 
+    color: #FFF; 
+    text-align: center;  
+    padding: 20px;  
+}
+ 
+.file-name {
+    color: #00F;  
+    font-weight: bold; 
+}
+ 
+#my-name {
+    text-transform: uppercase;  
+}
+
+
+/********************************
+ * ADD THIS PART FOR IMPROVISE
+ *******************************/
+.question {
+    position: relative;
+    padding-left: 25px;  
+}
+ 
+.question::before  {
+    content: '✓';
+    color: green;
+    font-size: 50px;
+    position: absolute;
+    left: -10px;
+    top: -35px;
+}
+.check {
+    position: relative;
+    padding-left: 25px;  
+}
+ 
+.check::before  {
+    content: '✓';
+    color: green;
+    font-size: 50px;
+    position: absolute;
+    left: -10px;
+    top: -35px;
+}
