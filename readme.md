@@ -31,6 +31,8 @@ Colocar .env en la carpeta BackEnd
 
 - BACK END (Servidor): Node js  y Express
 
+- FRONT END (no se utilizo Framework ya que no fue solicitado)
+
 - sweet alert (manejo de notificacione)
 
 
