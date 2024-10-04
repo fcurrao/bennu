@@ -12,8 +12,7 @@ const app = express();
 const URI = process.env.URI; 
 const PORT = process.env.PORT || 8000;  
 
-app.use(express.json());
-app.use(bodyParser.json());
+app.use(express.json()); 
 app.use(cors());
 
 // Endpoint Root
@@ -56,14 +55,14 @@ app.post('/api/users', (req, res) => {
     const { street, prov, city } = address;
 
 
-    if (!name || !username || !email || !adress || !street || !prov || !city|| !phone) {
+    if (!name || !username || !email || !address || !street || !prov || !city|| !phone) {
         return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
 
 
     db.run(
-        `INSERT INTO users (name, username, email, adress, phone) VALUES (?, ?, ?, ?,, ?)`,
-        [name, username, email, adress, phone],
+        `INSERT INTO users (name, username, email, address, phone) VALUES (?, ?, ?, ?, ?)`,
+        [name, username, email, JSON.stringify(address), phone], 
         function (err) {
             if (err) {
                 console.error('Error al insertar el usuario:', err.message); 
@@ -116,5 +115,5 @@ app.get('/api/export-users-json', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on ${URI}${PORT}`);
+    console.log(`Server is running on ${URI}:${PORT}`);
 });
