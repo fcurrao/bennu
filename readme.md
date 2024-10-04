@@ -16,10 +16,15 @@ Colocar .env en la carpeta BackEnd
 
 ### Instalacion
 -Clonar el repositorio.
+
 -Colocar el archivo env dentro de la carpeta back (cambiar el nombre a ".env" si es necesario)
+
 -Desde el directorio backend ejecutar NPM I ('cd backend'  y luego  'npm i')  (solo backend) 
+
 -Ejecutar en carpeta raiz de backend el comando 'node server.js'  (El servidor se levanta  en el puerto 8000 por default)
+
 -Luego levantar el archivo HTML para el front
+
 
  
 
