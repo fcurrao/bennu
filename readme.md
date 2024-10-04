@@ -10,18 +10,16 @@ Se realizo lo solicitado por el cliente ante las necesidades de solucionar los p
 ### Variables de entorno.
 Las variables de entorno, por seguridad, fueron enviadas por correo electronico a quien corresponda.
 Colocar .env en la carpeta BackEnd
-
-
+ 
 
 --- 
 
 ### Instalacion
-- Instalar las dependencias del proyecto (npm i ) en la carpeta raiz de backend y de frront 
-- colocar el archivo .env en la carpeta BackEnd
-- ejecutar en carpeta raiz de backend el comando node server.js
-- luego levantar el archivo HTML para el front
-
-- El servidor se levanta  en el puerto 8000 por default
+-Clonar el repositorio.
+-Colocar el archivo env dentro de la carpeta back (cambiar el nombre a ".env" si es necesario)
+-Desde el directorio backend ejecutar NPM I ('cd backend'  y luego  'npm i')  (solo backend) 
+-Ejecutar en carpeta raiz de backend el comando 'node server.js'  (El servidor se levanta  en el puerto 8000 por default)
+-Luego levantar el archivo HTML para el front
 
  
 
